@@ -38,7 +38,7 @@ def main_menu():
                     print("Ошибка: Доступны 'sigmoid' или 'relu'. Выбрана 'sigmoid' по умолчанию.")
                     act = 'sigmoid'
                     
-                net = NeuralNetwork(layer_sizes=layers, activation=act)
+                net = NeuralNetwork(layer_sizes=layers, activation=act, random_seed=42)
             except ValueError:
                 print("Ошибка: Введите целые числа через запятую.")
             except NeuralNetworkError as e:

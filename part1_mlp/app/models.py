@@ -138,7 +138,7 @@ class NeuralNetwork:
                 layer_outputs, layer_linear_outputs = self.forward(X_batch)
 
                 # 2. Считаем ошибку (MSE)
-                loss = np.mean((layer_outputs[-1] - y_batch) ** 2)
+                loss = np.mean((layer_outputs[-1] - y_batch.reshape(-1, 1)) ** 2)
                 epoch_loss += loss
 
                 # 3. Обратный проход
